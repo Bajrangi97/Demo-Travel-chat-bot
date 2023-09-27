@@ -1,0 +1,193 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": ["Hi", "Hey", "Hello", "Greetings"," how are you?", "Hi there"],
+        "responses": ["Hello! 😊 How can I assist you today?","I am fine", "Hi there! 👋 How can I help you?", "Hello! What can I do for you? 😄"]
+      },
+      {
+        "tag": "bus_schedule",
+        "patterns": ["Tell me the bus schedule", "What are the bus timings?", "Bus schedule for today"],
+        "responses": ["Sure, I can help you with the bus schedule. Please provide the departure and destination districts for more details. 🚌"]
+      },
+      {
+        "tag": "fare_inquiry",
+        "patterns": ["How much does a ticket cost?", "What's the fare for a journey?", "Ticket price"],
+        "responses": ["The ticket fare depends on the distance between the departure and destination districts. Please specify your travel details for accurate fare information. 💰"]
+      },
+      {
+        "tag": "book_ticket",
+        "patterns": ["I want to book a ticket", "How can I book a bus ticket?", "Book a bus seat"],
+        "responses": [
+          "Great! To book a ticket, please provide the following information: departure district, destination district, date, and number of passengers. 📅",
+          "To book a bus ticket, you can visit our website at [UP_Travel](https://up_travel.com). 🎫"
+        ]
+      },
+      {
+        "tag": "cancel_ticket",
+        "patterns": ["Can I cancel my ticket?", "How to cancel a booked ticket?", "Cancellation policy"],
+        "responses": ["Yes, you can cancel a booked ticket. To cancel, please provide your booking reference number, and we will assist you with the cancellation process. 🎫"]
+      },
+      {
+        "tag": "contact_info",
+        "patterns": ["How can I contact the agency?", "Contact information", "Customer support"],
+        "responses": ["You can reach our customer support team at +91-9876543210. We're here to assist you with any questions or concerns you may have. ☎️"]
+      },
+      {
+        "tag": "about_agency",
+        "patterns": ["Tell me about the travel agency", "About your company", "Agency information"],
+        "responses": ["We are a leading travel agency in Uttar Pradesh, providing reliable bus services between districts. Our mission is to ensure safe and comfortable journeys for our passengers. 🌟"]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "Appreciate your help"],
+        "responses": ["You're welcome! If you have any more questions or need assistance, feel free to ask. 😊", "You're most welcome! Have a great journey! 🚀"]
+      },
+      {
+        "tag": "not_understood",
+        "patterns": ["I don't understand", "Confused", "What do you mean?"],
+        "responses": [
+          "I apologize if my response was unclear. Please feel free to ask your question again, and I'll do my best to assist you. 🤔",
+          "I'm here to help with UP travel-related questions. If you have any inquiries about that, feel free to ask. 😊",
+          "Sorry, I am created to assist you with UP travel-related queries. If you have any questions about that, please let me know. 🚌"
+        ]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Bye", "See you later", "Goodbye"],
+        "responses": ["See you later! Have a nice day! 👋", "Goodbye! Come back again! 😊"]
+      },
+      {
+        "tag": "fare_calculation",
+        "patterns": ["Calculate fare from {departure} to {destination}", "Fare between {departure} and {destination}", "Calculate bus fare for {departure} to {destination}"],
+        "responses": ["The fare from {departure} to {destination} is ₹{fare}. The fare is calculated based on the distance between the two districts, with a rate of ₹1.20 per kilometer."]
+      },
+      {
+        "tag": "bus_departure_time",
+        "patterns": ["When does the bus from {departure} depart?", "Bus departure time from {departure}", "Next bus from {departure}"],
+        "responses": ["The next bus from {departure} departs at {next_departure_time}. Buses from the same district depart approximately every half-hour. 🕒"]
+      },
+      {
+        "tag": "find_location",
+        "patterns": ["I am in {district}. Can you help me?", "Find my location in {district}", "Locate me in {district}"],
+        "responses": ["Of course! I can help you. Please click on the following Google Maps link to find your location in {district}: [Google Maps](https://maps.google.com/?q={district}) 🗺️"]
+      },
+      {
+        "tag": "bot_name",
+        "patterns": ["What's your name?", "Who are you?", "Your name"],
+        "responses": ["I'm a bot created by SAHNI. You can call me your travel assistant. 😊", "I am a bot developed by SAHNI. How can I assist you today? 🤖"]
+      },
+      {
+        "tag": "district_info",
+        "patterns": ["Tell me about {district}", "Information about {district}", "What do you know about {district}"],
+        "responses": ["{district} is a district in Uttar Pradesh. Let me find more information about {district} for you. 📚"]
+      },
+      {
+        "tag": "district_wikipedia",
+        "patterns": ["Tell me more", "More details", "Wikipedia"],
+        "responses": ["Here is the Wikipedia link for {district}: [Wikipedia](https://en.wikipedia.org/wiki/{district}) 📖"]
+      },
+      {
+        "tag": "bus_suggestion",
+        "patterns": [
+          "I want to go to {destination}. Which bus should I take?",
+          "Take me to {destination}. Which bus should I board?",
+          "How can I reach {destination} by bus?"
+        ],
+        "responses": [
+          "To reach {destination}, you can take the following bus(es):",
+          "For your journey to {destination}, consider these bus options:",
+          "You can board the following bus(es) to {destination}:"
+        ]
+      },
+      {
+        "tag": "promotions",
+        "patterns": ["Are there any current promotions?", "Tell me about discounts", "Promotional offers"],
+        "responses": ["Yes, we have some exciting promotions right now! Check out our website for the latest discounts and offers. 🎉"]
+      },
+      {
+        "tag": "lost_and_found",
+        "patterns": ["I lost something on the bus", "Lost and found", "Lost item"],
+        "responses": ["I'm sorry to hear that. To report a lost item, please contact our lost and found department at +91-XXXXXXXXXX. They will assist you in locating your lost belongings. 🧳"]
+      }
+    ],
+    "districts": [
+      "Agra", "Aligarh", "Allahabad", "Ambedkar Nagar", "Amethi", "Amroha", "Auraiya", "Azamgarh", "Baghpat", "Bahraich", "Ballia", "Balrampur", "Banda", "Barabanki", "Bareilly", "Basti", "Bijnor", "Budaun", "Bulandshahr", "Chandauli", "Chitrakoot", "Deoria", "Etah", "Etawah", "Faizabad", "Farrukhabad", "Fatehpur", "Firozabad", "Gautam Buddh Nagar", "Ghaziabad", "Ghazipur", "Gonda", "Gorakhpur", "Hamirpur", "Hapur", "Hardoi", "Hathras", "Jalaun", "Jaunpur", "Jhansi", "Kannauj", "Kanpur Dehat", "Kanpur Nagar", "Kasganj", "Kaushambi", "Kheri", "Kushinagar", "Lalitpur", "Lucknow", "Maharajganj", "Mahoba", "Mainpuri", "Mathura", "Mau", "Meerut", "Mirzapur", "Moradabad", "Muzaffarnagar", "Pilibhit", "Pratapgarh", "Rae Bareli", "Rampur", "Saharanpur", "Sambhal", "Sant Kabir Nagar", "Shahjahanpur", "Shamli", "Shrawasti", "Siddharthnagar", "Sitapur", "Sonbhadra", "Sultanpur", "Unnao", "Varanasi"
+    ],
+    "bus_schedules": {
+      "Agra": ["6:00 AM", "6:30 AM", "7:00 AM", "7:30 AM", "8:00 AM", "8:30 AM"],
+      "Aligarh": ["6:15 AM", "6:45 AM", "7:15 AM", "7:45 AM", "8:15 AM", "8:45 AM"],
+      "Allahabad": ["6:10 AM", "6:40 AM", "7:10 AM", "7:40 AM", "8:10 AM", "8:40 AM"],
+      "Ambedkar Nagar": ["6:20 AM", "6:50 AM", "7:20 AM", "7:50 AM", "8:20 AM", "8:50 AM"],
+      "Amethi": ["6:05 AM", "6:35 AM", "7:05 AM", "7:35 AM", "8:05 AM", "8:35 AM"],
+      "Amroha": ["6:25 AM", "6:55 AM", "7:25 AM", "7:55 AM", "8:25 AM", "8:55 AM"],
+      "Auraiya": ["6:15 AM", "6:45 AM", "7:15 AM", "7:45 AM", "8:15 AM", "8:45 AM"],
+      "Azamgarh": ["6:10 AM", "6:40 AM", "7:10 AM", "7:40 AM", "8:10 AM", "8:40 AM"],
+      "Baghpat": ["6:20 AM", "6:50 AM", "7:20 AM", "7:50 AM", "8:20 AM", "8:50 AM"],
+      "Bahraich": ["6:05 AM", "6:35 AM", "7:05 AM", "7:35 AM", "8:05 AM", "8:35 AM"],
+      "Ballia": ["6:25 AM", "6:55 AM", "7:25 AM", "7:55 AM", "8:25 AM", "8:55 AM"],
+      "Balrampur": ["6:15 AM", "6:45 AM", "7:15 AM", "7:45 AM", "8:15 AM", "8:45 AM"],
+      "Banda": ["6:10 AM", "6:40 AM", "7:10 AM", "7:40 AM", "8:10 AM", "8:40 AM"],
+      "Barabanki": ["6:20 AM", "6:50 AM", "7:20 AM", "7:50 AM", "8:20 AM", "8:50 AM"],
+      "Bareilly": ["6:05 AM", "6:35 AM", "7:05 AM", "7:35 AM", "8:05 AM", "8:35 AM"],
+      "Basti": ["6:25 AM", "6:55 AM", "7:25 AM", "7:55 AM", "8:25 AM", "8:55 AM"],
+      "Bijnor": ["6:15 AM", "6:45 AM", "7:15 AM", "7:45 AM", "8:15 AM", "8:45 AM"],
+      "Budaun": ["6:10 AM", "6:40 AM", "7:10 AM", "7:40 AM", "8:10 AM", "8:40 AM"],
+      "Bulandshahr": ["6:20 AM", "6:50 AM", "7:20 AM", "7:50 AM", "8:20 AM", "8:50 AM"],
+      "Chandauli": ["6:05 AM", "6:35 AM", "7:05 AM", "7:35 AM", "8:05 AM", "8:35 AM"],
+      "Chitrakoot": ["6:25 AM", "6:55 AM", "7:25 AM", "7:55 AM", "8:25 AM", "8:55 AM"],
+      "Deoria": ["6:15 AM", "6:45 AM", "7:15 AM", "7:45 AM", "8:15 AM", "8:45 AM"],
+      "Etah": ["6:10 AM", "6:40 AM", "7:10 AM", "7:40 AM", "8:10 AM", "8:40 AM"],
+      "Etawah": ["6:20 AM", "6:50 AM", "7:20 AM", "7:50 AM", "8:20 AM", "8:50 AM"],
+      "Faizabad": ["6:05 AM", "6:35 AM", "7:05 AM", "7:35 AM", "8:05 AM", "8:35 AM"],
+      "Farrukhabad": ["6:25 AM", "6:55 AM", "7:25 AM", "7:55 AM", "8:25 AM", "8:55 AM"],
+      "Fatehpur": ["6:15 AM", "6:45 AM", "7:15 AM", "7:45 AM", "8:15 AM", "8:45 AM"],
+      "Firozabad": ["6:10 AM", "6:40 AM", "7:10 AM", "7:40 AM", "8:10 AM", "8:40 AM"],
+      "Gautam Buddh Nagar": ["6:20 AM", "6:50 AM", "7:20 AM", "7:50 AM", "8:20 AM", "8:50 AM"],
+      "Ghaziabad": ["6:05 AM", "6:35 AM", "7:05 AM", "7:35 AM", "8:05 AM", "8:35 AM"],
+      "Ghazipur": ["6:25 AM", "6:55 AM", "7:25 AM", "7:55 AM", "8:25 AM", "8:55 AM"],
+      "Gonda": ["6:15 AM", "6:45 AM", "7:15 AM", "7:45 AM", "8:15 AM", "8:45 AM"],
+      "Gorakhpur": ["6:10 AM", "6:40 AM", "7:10 AM", "7:40 AM", "8:10 AM", "8:40 AM"],
+      "Hamirpur": ["6:20 AM", "6:50 AM", "7:20 AM", "7:50 AM", "8:20 AM", "8:50 AM"],
+      "Hapur": ["6:05 AM", "6:35 AM", "7:05 AM", "7:35 AM", "8:05 AM", "8:35 AM"],
+      "Hardoi": ["6:25 AM", "6:55 AM", "7:25 AM", "7:55 AM", "8:25 AM", "8:55 AM"],
+      "Hathras": ["6:15 AM", "6:45 AM", "7:15 AM", "7:45 AM", "8:15 AM", "8:45 AM"],
+      "Jalaun": ["6:10 AM", "6:40 AM", "7:10 AM", "7:40 AM", "8:10 AM", "8:40 AM"],
+      "Jaunpur": ["6:20 AM", "6:50 AM", "7:20 AM", "7:50 AM", "8:20 AM", "8:50 AM"],
+      "Jhansi": ["6:05 AM", "6:35 AM", "7:05 AM", "7:35 AM", "8:05 AM", "8:35 AM"],
+      "Kannauj": ["6:25 AM", "6:55 AM", "7:25 AM", "7:55 AM", "8:25 AM", "8:55 AM"],
+      "Kanpur Dehat": ["6:15 AM", "6:45 AM", "7:15 AM", "7:45 AM", "8:15 AM", "8:45 AM"],
+      "Kanpur Nagar": ["6:10 AM", "6:40 AM", "7:10 AM", "7:40 AM", "8:10 AM", "8:40 AM"],
+      "Kasganj": ["6:20 AM", "6:50 AM", "7:20 AM", "7:50 AM", "8:20 AM", "8:50 AM"],
+      "Kaushambi": ["6:05 AM", "6:35 AM", "7:05 AM", "7:35 AM", "8:05 AM", "8:35 AM"],
+      "Kheri": ["6:25 AM", "6:55 AM", "7:25 AM", "7:55 AM", "8:25 AM", "8:55 AM"],
+      "Kushinagar": ["6:15 AM", "6:45 AM", "7:15 AM", "7:45 AM", "8:15 AM", "8:45 AM"],
+      "Lalitpur": ["6:10 AM", "6:40 AM", "7:10 AM", "7:40 AM", "8:10 AM", "8:40 AM"],
+      "Lucknow": ["6:20 AM", "6:50 AM", "7:20 AM", "7:50 AM", "8:20 AM", "8:50 AM"],
+      "Maharajganj": ["6:05 AM", "6:35 AM", "7:05 AM", "7:35 AM", "8:05 AM", "8:35 AM"],
+      "Mahoba": ["6:25 AM", "6:55 AM", "7:25 AM", "7:55 AM", "8:25 AM", "8:55 AM"],
+      "Mainpuri": ["6:15 AM", "6:45 AM", "7:15 AM", "7:45 AM", "8:15 AM", "8:45 AM"],
+      "Mathura": ["6:10 AM", "6:40 AM", "7:10 AM", "7:40 AM", "8:10 AM", "8:40 AM"],
+      "Mau": ["6:20 AM", "6:50 AM", "7:20 AM", "7:50 AM", "8:20 AM", "8:50 AM"],
+      "Meerut": ["6:05 AM", "6:35 AM", "7:05 AM", "7:35 AM", "8:05 AM", "8:35 AM"],
+      "Mirzapur": ["6:25 AM", "6:55 AM", "7:25 AM", "7:55 AM", "8:25 AM", "8:55 AM"],
+      "Moradabad": ["6:15 AM", "6:45 AM", "7:15 AM", "7:45 AM", "8:15 AM", "8:45 AM"],
+      "Muzaffarnagar": ["6:10 AM", "6:40 AM", "7:10 AM", "7:40 AM", "8:10 AM", "8:40 AM"],
+      "Pilibhit": ["6:20 AM", "6:50 AM", "7:20 AM", "7:50 AM", "8:20 AM", "8:50 AM"],
+      "Pratapgarh": ["6:05 AM", "6:35 AM", "7:05 AM", "7:35 AM", "8:05 AM", "8:35 AM"],
+      "Rae Bareli": ["6:25 AM", "6:55 AM", "7:25 AM", "7:55 AM", "8:25 AM", "8:55 AM"],
+      "Rampur": ["6:15 AM", "6:45 AM", "7:15 AM", "7:45 AM", "8:15 AM", "8:45 AM"],
+      "Saharanpur": ["6:10 AM", "6:40 AM", "7:10 AM", "7:40 AM", "8:10 AM", "8:40 AM"],
+      "Sambhal": ["6:20 AM", "6:50 AM", "7:20 AM", "7:50 AM", "8:20 AM", "8:50 AM"],
+      "Sant Kabir Nagar": ["6:05 AM", "6:35 AM", "7:05 AM", "7:35 AM", "8:05 AM", "8:35 AM"],
+      "Shahjahanpur": ["6:25 AM", "6:55 AM", "7:25 AM", "7:55 AM", "8:25 AM", "8:55 AM"],
+      "Shamli": ["6:15 AM", "6:45 AM", "7:15 AM", "7:45 AM", "8:15 AM", "8:45 AM"],
+      "Shrawasti": ["6:10 AM", "6:40 AM", "7:10 AM", "7:40 AM", "8:10 AM", "8:40 AM"],
+      "Siddharthnagar": ["6:20 AM", "6:50 AM", "7:20 AM", "7:50 AM", "8:20 AM", "8:50 AM"],
+      "Sitapur": ["6:05 AM", "6:35 AM", "7:05 AM", "7:35 AM", "8:05 AM", "8:35 AM"],
+      "Sonbhadra": ["6:25 AM", "6:55 AM", "7:25 AM", "7:55 AM", "8:25 AM", "8:55 AM"],
+      "Sultanpur": ["6:15 AM", "6:45 AM", "7:15 AM", "7:45 AM", "8:15 AM", "8:45 AM"],
+      "Unnao": ["6:10 AM", "6:40 AM", "7:10 AM", "7:40 AM", "8:10 AM", "8:40 AM"],
+      "Varanasi": ["6:15 AM", "6:45 AM", "7:15 AM", "7:45 AM", "8:15 AM", "8:45 AM"]
+    }
+  }
